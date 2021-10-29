@@ -1,0 +1,283 @@
+<!-- -----------------------------------------------------------------------------------------------------------------------------------
+  Project: BME/CSE Wearable Sensor: Stresswatch
+  File: index.html
+  Team Members: Megan Lu, Kristen Park, Kanita Sivananthan, Lily Wang
+  Team Member Responsible for Page: Kanita Sivananthan
+  Date: 6/11/2021
+
+  Task Description: Home Page
+    - Informs viewer about stress.
+    - Informs viewer about the StressWatch.
+    - Modals allow the user to sign up, login, and logout.
+----------------------------------------------------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!--Meta tags-->
+        <meta charset="utf-8">
+        <!--Optimization for mobile + web-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--CSS Link-->
+        <link rel="stylesheet" type="text/css" href="/CSS/style.css">
+        <!--Import materialize.css via CDN link-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!--Materialize icons link-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <title>Home</title>
+    </head>
+
+    <body>
+        <!--WEBSITE HEADER-->
+        <header>
+            <!--Logo + Modals Bar-->
+            <nav>
+                <img src="images/watchlogo.png" alt="StressWatch logo" height="50px" id="logoimg">
+                <a class="brand-logo" style="color:black"><b>StressWatch</b></a>
+                <ul class="right right-items">
+                    <li class="logged-in"><a href="#modal-logout" style="color:black" id="logout"><i class="material-icons left icon-black">exit_to_app</i>Logout</a></li>
+                    <li class="logged-out"><a href="#modal-signup" style="color:black" class="modal-trigger"><i class="material-icons left icon-black">person_add</i>Sign Up</a></li>
+                    <li class="logged-out"><a href="#modal-login" style="color:black" class="modal-trigger"><i class="material-icons left icon-black">person</i>Login</a></li>
+                </ul>
+            </nav>
+
+            <!--Normal Nav Bar-->
+            <nav id="bottom-bar">
+                <ul class="left left-items">
+                    <li><a href="index.html" style="color:black" id="cur_pg">Home</a></li>
+                    <li><a href="faq.html" style="color:black">FAQ/Help</a></li>
+                    <li class="logged-in"><a onclick="switchpage()"  style="color:black">Your StressWatch</a></li>
+                </ul> 
+            </nav>
+        </header>
+
+        <!--ACCOUNT MODALS-->
+        <!--Log In Modal-->
+        <div id="modal-login" class="modal">
+            <div class="modal-content">
+                <h4>Log In</h4>
+                <form id="login-form">
+                    <div class="input-field">
+                        <input type="email" id="login-email" placeholder="Email Address" required>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="login-password" placeholder="Password" required>
+                    </div>
+                    <button>Log In</button>
+                </form>
+            </div> <!-- /.modal-content -->
+        </div> <!-- /.modal -->
+
+        <!--Sign Up Modal-->
+        <div id="modal-signup" class="modal">
+            <div class="modal-content">
+                <h4>Sign Up</h4>
+                <form id="signup-form">
+                    <div class="input-field">
+                        <input type="email" id="signup-email" placeholder="Email Address" required>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="signup-uName" placeholder="Username" required>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="signup-fName" placeholder="First Name" required>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="signup-lName" placeholder="Last Name" required>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="signup-password" placeholder="Password (min 8 chars)" minlength="8" required>
+                    </div>
+                    <button>Sign Up</button>
+                </form>
+            </div> <!-- /.modal-content -->
+        </div> <!-- /.modal -->
+
+        <main>
+            <!--INFORMATION ABOUT STRESS-->
+            <div class="pinky">
+                <h4 class="center"><b>About Stress</b></h4>
+                <p class="center">CLICK ON THE CARDS TO LEARN MORE</p>
+                <div></div>
+
+                <div class="row align">
+                    <!--Column 1-->
+                    <div class="col">
+                        <!--Common CARD-->
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                              <img class="activator" src="images/groupPeople.png">
+                            </div>
+                            <div class="card-content">
+                              <span class="card-title activator grey-text text-darken-4">How Common Is It?<i class="material-icons right">more_vert</i></span>
+                            </div>
+                            <div class="card-reveal">
+                              <span class="card-title grey-text text-darken-4">How Common Is It?<i class="material-icons right">close</i></span>
+                              <ul class="pad">
+                                <li>33% of people report feeling extreme stress.</li>
+                                <li>77% of people experience stress that affects their physical health.</li>
+                                <li>73% of people have stress that impacts their mental health.</li>
+                                <li>48% of people have trouble sleeping because of stress.</li>
+                                <li>Stress is the #1 health concern of high school students.</li>
+                                <li>80% of people feel stress at work.</li>
+                                </ul>
+                            </div> <!-- /.card-reveal -->
+                        </div> <!-- /.card -->
+                    </div> <!-- /.col -->
+
+                    <!--Column 2-->
+                    <div class="col">
+                        <!--Causes CARD-->
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                              <img class="activator" src="images/stressPuzzle.jpg">
+                            </div>
+                            <div class="card-content">
+                              <span class="card-title activator grey-text text-darken-4">Top Causes<i class="material-icons right">more_vert</i></span>
+                            </div>
+                            <div class="card-reveal">
+                              <span class="card-title grey-text text-darken-4">Top Causes<i class="material-icons right">close</i></span>
+                              <ul class="pad">
+                                <li>Money</li>
+                                <li>Work</li>
+                                <li>The economy</li>
+                                <li>Family responsibilities</li>
+                                <li>Relationships</li>
+                                <li>Personal health issues</li>
+                                <li>Housing costs</li>
+                                <li>Job stability</li>
+                                <li>Family health problems</li>
+                                <li>Personal safety</li>
+                                </ul>
+                            </div> <!-- /.card-reveal -->
+                        </div> <!-- /.card -->
+                    </div> <!-- /.col -->
+
+                    <!--Column 3-->
+                    <div class="col">
+                        <!--Symptoms CARD-->
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                              <img class="activator" src="images/stressSqueeze.png">
+                            </div>
+                            <div class="card-content">
+                              <span class="card-title activator grey-text text-darken-4">Common Symptoms<i class="material-icons right">more_vert</i></span>
+                            </div>
+                            <div class="card-reveal">
+                              <span class="card-title grey-text text-darken-4">Common Symptoms<i class="material-icons right">close</i></span>
+                              <ul class="pad">
+                                <li>Irritability and anger: 45%</li>
+                                <li>Fatigue or low energy: 41%</li>
+                                <li>Lack of motivation or interest in things: 38%</li>
+                                <li>Anxiety, nervousness, or worry: 36%</li>
+                                <li>Headaches: 36%</li>
+                                <li>Feeling sad or depressed: 34%</li>
+                                <li>Indigestion, acid reflux, or upset stomach: 26%</li>
+                                <li>Muscle tension: 23%</li>
+                                <li>Appetite changes: 21%</li>
+                                </ul>
+                            </div> <!-- /.card-reveal -->
+                        </div> <!-- /.card -->
+                    </div> <!-- /.col -->
+                </div> <!-- /.row align -->
+            </div> <!-- /.pinky -->
+
+            <!--TRANSITION TO SENSOR-->
+            <div class="blank-format">
+                <div class="row">
+                    <!--Column 1-->
+                    <div class="col s3">
+                        <h4><b>THE<br>PROBLEM:</b></h4>
+                    </div>
+
+                    <!--Column 2-->
+                    <div class="col s9 blank-text">
+                        <p>It can be difficult to gauge symptoms and stressors to determine which treatment methods are ideal for the patient. 
+                            Current stress monitoring practices can be inaccurate and subjective, or the equipment used is generally inaccessible. 
+                            Other available devices are expensive or do not allow health professionals to view the data remotely.</p>
+                    </div> <!-- /.col s9 blank-text -->
+                </div> <!-- /.row -->
+            </div> <!-- /.blank-format -->
+
+            <!--ABOUT THE STRESSWATCH-->
+            <div class="bluey">
+                <h6 class="center spaced"><b>THE SOLUTION:</b></h6>
+                <h3 class="center spaced2"><b>StressWatch</b></h3>
+
+                <div class="row">
+                    <!--Column 1-->
+                    <div class="col s5">
+                        <!--CAROUSEL-->
+                        <div class="carousel carousel-slider center">
+                            <div class="carousel-fixed-item center">
+                            </div>
+                            <div class="carousel-item" href="#one!">
+                                <img src="images/sensorProto2.png" alt="The StressWatch" id="stressWatchPic">
+                            </div>
+                            <div class="carousel-item" href="#two!">
+                                <img src="images/demonstration.jpg" alt="Demonstration of the StressWatch" id="stressWatchDemo">
+                            </div>
+                            <div class="carousel-item" href="#three!">
+                                <img src="images/temp-demo.jpg" alt="The StressWatch on a hand" id="stressWatchHand">
+                            </div>
+                            <div class="carousel-item" href="#four!">
+                                <video width="500" controls>
+                                    <source src="images/Lily-wearableSensorInstructions.mp4">
+                                </video>
+                            </div> <!-- /.carousel-item -->
+                        </div> <!-- /.carousel carousel-slider center -->
+                    </div> <!-- /.col s5 -->
+
+                    <!--Column 2-->
+                    <div class="col s6 middle">
+                        <h6 id="description">The StressWatch is a stress monitoring device that allows for real-time detection of stress levels based on the skin conductance response.</h6>
+                    </div> <!-- /.col s6 middle -->
+                </div> <!-- /.row -->
+            </div> <!-- /.bluey -->
+
+            <div class="less-bluey">
+                <div class="row">
+                    <!--Column 1-->
+                    <div class="col s8">
+                        <h5><b>How It Works</b></h5>
+                        <p>During a stress response, a person experiences an increase in body temperature, causing perspiration.
+                            Skin conductance, also known as a galvanic skin response or GSR, is a phenomenon when the skin becomes a better conductor of electricity when one is physiologically aroused, meaning there is an emotional response. 
+                        </p>
+                        <p>
+                            Using a GSR sensor, the StressWatch collects data on human resistance, a measure of the opposition to current flow on a person’s skin. 
+                            Significant drops, or lower values, in human resistance indicate greater stress, as there is more sweat and therefore, more current.
+                        </p>
+                        <p>To the right is an exmaple of a drop seen in one's data if one were stressed.</p>
+                    </div>
+
+                    <!--Column 2-->
+                    <div class="col s4">
+                        <img class="right" src="images/stressDrop.png" alt="Example of a drop in the data that indicates stress" width="400px">
+                    </div> <!-- /.col s3 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.less-bluey -->
+        </main>
+
+        <!--FIREBASE-->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+
+        <!--SCRIPTS-->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        
+        <script src="JS/auth.js"></script>
+        <script src="JS/index.js"></script>
+
+        <!--CAROUSEL-->
+        <script>
+            $('.carousel.carousel-slider').carousel({
+                fullWidth: true,
+                indicators: true
+            });
+        </script>
+    </body>
+</html>

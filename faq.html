@@ -1,0 +1,249 @@
+<!-- -----------------------------------------------------------------------------------------------------------------------------------
+  Project: BME/CSE Wearable Sensor: Stresswatch
+  File: faq.html
+  Team Members: Megan Lu, Kristen Park, Kanita Sivananthan, Lily Wang
+  Team Member Responsible for Page: Kanita Sivananthan
+  Date: 6/11/2021
+
+  Task Description: Home Page
+    - Displays answers to questions viewers may have about the StressWatch.
+    - Modals allow the user to sign up, login, and logout.
+----------------------------------------------------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!--Meta tags-->
+        <meta charset="utf-8">
+        <!--Optimization for mobile + web-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--CSS Link-->
+        <link rel="stylesheet" type="text/css" href="/CSS/style.css">
+        <!--Import materialize.css via CDN link-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!--Materialize icons link-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <title>FAQ/Help</title>
+    </head>
+
+    <body>
+        <!--WEBSITE HEADER-->
+        <header>
+            <!--Logo + Modals Bar-->
+            <nav>
+                <img src="images/watchlogo.png" alt="StressWatch logo" height="50px" id="logoimg">
+                <a class="brand-logo" style="color:black"><b>StressWatch</b></a>
+                <ul class="right right-items">
+                    <li class="logged-in"><a href="#modal-logout" style="color:black" id="logout"><i class="material-icons left icon-black">exit_to_app</i>Logout</a></li>
+                    <li class="logged-out"><a href="#modal-signup" style="color:black" class="modal-trigger"><i class="material-icons left icon-black">person_add</i>Sign Up</a></li>
+                    <li class="logged-out"><a href="#modal-login" style="color:black" class="modal-trigger"><i class="material-icons left icon-black">person</i>Login</a></li>
+                </ul>
+            </nav>
+
+            <!--Normal Nav Bar-->
+            <div class="nav-wrapper">
+                <nav id="bottom-bar">
+                    <ul class="left left-items">
+                        <li><a href="index.html" style="color:black">Home</a></li>
+                        <li><a href="faq.html" style="color:black"  id="cur_pg">FAQ/Help</a></li>
+                        <li class="logged-in"><a onclick="switchpage()"  style="color:black">Your StressWatch</a></li>
+                    </ul> 
+                </nav>
+            </div>
+        </header>
+
+        <!--ACCOUNT MODAL STUFF-->
+        <!--Log In Modal-->
+        <div id="modal-login" class="modal">
+            <div class="modal-content">
+                <h4>Log In</h4>
+                <form id="login-form">
+                    <div class="input-field">
+                        <input type="email" id="login-email" placeholder="Email Address" required>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="login-password" placeholder="Password" required>
+                    </div>
+                    <button>Log In</button>
+                </form>
+            </div> <!-- /.modal-content -->
+        </div> <!-- /.modal -->
+
+        <!--Sign Up Modal-->
+        <div id="modal-signup" class="modal">
+            <div class="modal-content">
+                <h4>Sign Up</h4>
+                <form id="signup-form">
+                    <div class="input-field">
+                        <input type="email" id="signup-email" placeholder="Email Address" required>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="signup-uName" placeholder="Username" required>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="signup-fName" placeholder="First Name" required>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="signup-lName" placeholder="Last Name" required>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="signup-password" placeholder="Password (min 8 chars)" minlength="8" required>
+                    </div>
+                    <button>Sign Up</button>
+                </form>
+            </div> <!-- /.modal-content -->
+        </div> <!-- /.modal -->
+
+        <main>
+            <!--FAQ-->
+            <div class="bluey2">
+                <h4 class="center"><b>Frequently Asked Questions</b></h4>
+                <div></div>
+                
+                <!--COLLAPSIBLES-->
+                <ul class="collapsible">
+                    <!--Collapsible 1-->
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">question_answer</i>
+                            How does the product differ from competitors?
+                        </div>
+                        <div class="collapsible-body">
+                            <span>
+                                Our product facilitates the transfer of information between a patient and a medical professional. 
+                                With convenient and real-time tracking, the StressWatch can monitor the patient’s stress throughout the day. 
+                                A medical professional could access the data through the database to keep track of progress of treatment or to identify stressors. 
+                                This saves the patient time and money on regular consultations with a medical professional. 
+                                It is also a cheaper and more reliable alternative to existing products.
+                            </span>
+                        </div>
+                    </li>
+
+                    <!--Collapsible 2-->
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">question_answer</i>
+                            Who can use the StressWatch?
+                        </div>
+                        <div class="collapsible-body">
+                            <span>
+                                Those who see stress or anxiety as a problem in their lives may use the StressWatch. 
+                                However, anyone can use it to take measurements, even if there are no known issues of stress or anxiety. 
+                            </span>
+                        </div>
+                    </li>
+
+                    <!--Collapsible 3-->
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">question_answer</i>
+                            How can the StressWatch help me?
+                        </div>
+                        <div class="collapsible-body">
+                            <span>
+                                The user can work with a health professional to evaluate their progress during treatment. 
+                                In addition, the device can take measurements during specific events or in specific situations to identify stressors or triggers and measure the degree of stress or anxiety. 
+                                The information can help the user to learn to cope with these triggers with a health professional. 
+                            </span>
+                        </div>
+                    </li>
+
+                    <!--Collapsible 4-->
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">question_answer</i>
+                            How accurate is the StressWatch?
+                        </div>
+                        <div class="collapsible-body">
+                            <span>
+                                The StressWatch is very accurate and is effective at detecting changes in stress levels. 
+                                However, there are several factors that can influence results. 
+                                The humidity of the patient’s environment can skew the skin conductance to lower resistance. 
+                                Similarly, perspiration on a patient’s hands can lower the results.
+                            </span>
+                        </div>
+                    </li>
+
+                    <!--Collapsible 5-->
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">question_answer</i>
+                            How much does the device cost?
+                        </div>
+                        <div class="collapsible-body">
+                            <span>
+                                The StressWatch costs $130, which is less than half the price of other competitors such as the $400 Apple Watch.
+                            </span>
+                        </div>
+                    </li>
+
+                    <!--Collapsible 6-->
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">question_answer</i>
+                            How do I use the StressWatch?
+                        </div>
+                        <div class="collapsible-body">
+                            <span>
+                                Please refer to our demo video on the home page for a step-by-step guide.
+                            </span>
+                        </div>
+                    </li>
+
+                    <!--Collapsible 7-->
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">question_answer</i>
+                            How do I create an account?
+                        </div>
+                        <div class="collapsible-body">
+                            <span>
+                                Simply click the "Sign Up" button at the top right of the website.
+                                Once you fill in all the required fields, a new page called "Your SweatWatch" will appear.
+                                Click on it to go to your StressWatch page to make your first measurement.
+                            </span>
+                        </div>
+                    </li>
+
+                    <!--Collapsible 8-->
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">question_answer</i>
+                            How can I view my data?
+                        </div>
+                        <div class="collapsible-body">
+                            <span>
+                                Click on the "Login" button at the top right of the website and log in.
+                                Once you do, a new page called "Your SweatWatch" will appear. 
+                                Click on it, scroll down, and you will be able to view your previous data in the form of a graph. 
+                                If you want to view data for a specific day, you can do so by selecting a date at the bottom of the page.
+                            </span>
+                        </div>
+                    </li>
+                </ul> <!-- /.collapsible -->
+            </div> <!-- /.bluey2 -->
+        </main>
+
+        <!--FIREBASE-->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+
+        <!--SCRIPTS-->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        
+        <script src="JS/auth.js"></script>
+        <script src="JS/index.js"></script>
+
+        <!--COLLAPSIBLE-->
+        <script>
+            $(document).ready(function(){
+                $('.collapsible').collapsible();
+            });
+        </script>
+        
+    </body>
+</html>

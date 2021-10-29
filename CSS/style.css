@@ -1,0 +1,257 @@
+/*CSS FOR INDEX.HTML AND FAQ.HTML*/
+
+/*Default of all elements*/
+*{
+    font-family: Helvetica;
+    letter-spacing: .1rem;
+}
+
+div{
+    display: inline-block;
+    width: 100%;
+}
+
+
+/*Text Styling*/
+.blank-text{
+    text-align: justify;
+}
+
+.blank-text > p{
+    letter-spacing: .15rem;
+}
+
+.spaced > b{
+    letter-spacing: .5rem;
+}
+
+.spaced2 > b{
+    letter-spacing: .4rem;
+}
+
+.pinky > p{
+    letter-spacing: .3rem;
+    font-size: small;
+}
+
+#description{
+    letter-spacing: .2rem;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.middle{
+    margin-top: 80px;
+}
+
+.less-bluey{
+    text-align: justify;
+}
+
+
+/*Table Styling*/
+.pad > li{
+    list-style-type: disc !important;
+    list-style-position: inside;
+    margin-left: 10px;
+    padding-left: 1.5em;
+    text-indent:-1.4em;
+}
+
+.pad{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.align{
+    display: flex;
+}
+
+
+/*Nav Bars*/
+#logoimg{
+    margin-top: 7px;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.right-items > li{
+    padding-right: 40px;
+}
+
+.right-items > li:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+}
+
+.left-items{
+    margin-left: 10px;
+}
+
+.left-items > li{
+    padding-right: 40px;
+}
+
+.left-items > li:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+}
+
+nav{
+    background: white !important;
+    box-shadow: none !important;
+}
+
+i.icon-black{
+    color: black;
+}
+
+#bottom-bar{
+    height: 40px !important;
+    line-height: 40px !important;
+    margin-bottom: 10px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#cur_pg {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+    font-weight: bold;
+}
+
+/*used to prevent content jerking around*/
+.nav-wrapper{
+    min-height: 41px;
+}
+
+
+/*Color Blocks*/
+.pinky{
+    background-color: rgb(248,188,179);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.blank-format{
+    padding-top: 80px;
+    padding-bottom: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
+    display: block;
+}
+
+.bluey{
+    background-color: rgb(179,211,248);
+    padding-top: 50px;
+    padding-bottom: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.less-bluey{
+    background-color: rgb(232, 245, 255);
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.bluey2{
+    background-color: rgb(179,211,248);
+    padding-top: 30px;
+    padding-bottom: 49px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+
+/*Carousel Styling*/
+#stressWatchPic{
+    height: 300px;
+    width: auto;
+}
+
+#stressWatchDemo{
+    height: 300px;
+    width: auto;
+}
+
+#stressWatchHand{
+    height: 300px;
+    width: auto; 
+}
+
+.carousel{
+    height: 320px !important;
+}
+
+
+/*Card Styling*/
+.card{
+    background-color: rgb(248,188,179) !important;
+    border-radius: 15px !important;
+}
+
+.card-image{
+    border-radius: 15px 15px 0px 0px !important;
+}
+
+.card-content{
+    background-color: rgb(255, 215, 209);
+    border-radius: 0px 0px 15px 15px !important;
+}
+
+.card-reveal{
+    background-color: rgb(255, 215, 209) !important;
+}
+
+.card-title{
+    letter-spacing: .2rem;
+    font-size: 20px !important;
+}
+
+
+/*Collapsible Styling*/
+.collapsible-body{
+    background-color: rgb(232, 245, 255);
+    text-align: justify;
+}
+
+.collapsible-header{
+    font-weight: bold;
+}
+
+
+/*Modal Styling*/
+#temp{
+    color: red;
+    padding-bottom: 10px;
+}
+
+#modal-login{
+    width: 50%;
+    max-height: 100%;
+    overflow: visible;
+}
+
+#modal-signup{
+    width: 50%;
+    max-height: 100%;
+    overflow: visible;
+}
+
+.modal-content > h4{
+    font-weight: bold !important;
+}

@@ -1,0 +1,148 @@
+/*Default elements*/
+html, body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Helvetica';
+  letter-spacing: .1rem;
+}
+
+/* Styles specific to GSR page*/
+
+/*Special classes*/
+.underline{
+  text-decoration: underline;
+}
+
+/*Label sections*/
+.section{
+  height: 150px;
+  background-color: black;
+  color: white;
+}
+.label{
+  padding-top: 50px;
+  letter-spacing: .2em;
+  text-decoration: underline;
+}
+
+/*Instruction section*/
+.instructions{
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+
+}
+.demo img{
+  display: block;
+  margin-top: 30px;
+  margin-left: 100px;
+  margin-right: 10px;
+  width: 15em; 
+  border: 5px solid #000
+}
+
+/*Button style*/
+.btn{
+  width: 20%;
+  height: 100px;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 20px;
+  text-align: center;
+  
+}
+.connect_btn:hover, .connect_btn:focus{
+  background: linear-gradient(-45deg,#338AFF, #3CF0C5);
+}
+.stop_btn:hover, .stop_btn:focus{
+  background: linear-gradient(-45deg, #FF3D77, #FFA63D);
+}
+
+/*Progress Bar*/
+.bar{
+  height: 50px;
+  width: 80% !important;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+  border-radius: 10px !important;
+  border-color: black !important;
+}
+
+.progress{
+  height: 50px;
+  border-radius: 10px !important;
+  border-color: black !important;
+}
+
+/*Chart*/
+canvas {
+  display: block;
+}
+.chartContainer{
+  text-align: center;
+}
+canvas{
+  max-width: 75% !important;
+  max-height: 50% !important;
+  margin: 0 auto;
+}
+
+/* Analysis text */
+.analysis{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.blue{
+  background-color: rgba(128, 182, 244, 0.6) !important;
+}
+.red{
+  background-color: rgba(244, 144, 128, 0.6) !important;
+}
+
+/*Back up login
+.login{
+  background: linear-gradient(0deg,rgba(128, 182, 244, 0.6), rgba(244, 144, 128, 0.6)  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.content{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}*/
+
+/* return */
+.return_btn{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60px;
+}
+.return{
+  height: 15px;
+}
+.return_text{
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  height: 60px;
+  font-size: 1.5em;
+}
+/*Hover animation*/
+.return_text:hover{
+  color:#26a69a;
+  font-size: 1.7em;
+}
+.return:hover{
+  height: 20px;
+}
+
+
+
+
+
